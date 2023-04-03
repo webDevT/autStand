@@ -1,0 +1,634 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1700px)
+	.graph-section 
+		background-size: 20.833vw
+	
+	.round_pct
+		width: 42.083vw
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1350px)
+	.program-section .container .wrapper
+		max-width: 50vw
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1250px)
+	/**/
+	.menu__item,
+	.lenguages,
+	.search
+		margin-left: 35px
+	.main-screen .main-screen__title
+		line-height: 1.2
+	.graph 
+		transform: translateX(0)
+		max-width: 100%
+	.next 
+		transform: translateX(0)
+	.about-us
+		background-size: 100%
+		background-position: top 14.688vw center
+	.about-text
+		font-size: 24px
+	.about-text1 
+		right: 290px
+	.about-text3 
+		right: 312px
+	.about-text2 
+		left: 285px 
+	.workspace__item 
+		padding-left: 100px 
+		padding-right: 100px
+		font-size: 26px
+@media only screen and (max-width : 1100px)
+	/**/
+	.menu__item,
+	.lenguages,
+	.search
+		margin-left: 25px
+	.main-screen__item
+		p 
+			font-size: 26px
+	.expertise-slider__item-content
+		height: 700px
+	.label-container 
+		width: 95vw
+	.project-table__row .project-col:first-child 
+		width: 300px
+	.project-table__row .project-col:nth-child(2)
+		width: calc(100% - 300px)
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.header 
+		position: relative
+	.header__menu 
+		display: none
+		z-index: 9999
+	.menu__row
+		width: 35px 
+		height: 2px 
+		background: #fff
+		margin-bottom: 8px
+		transition: all 0.3s
+	.menu__row:last-child 
+		margin-bottom: 0
+	.menu__btn
+		cursor: pointer 
+	.menu__btn.active
+		.menu__row:last-child
+			display: none
+		.menu__row:first-child 
+			transform: rotate(45deg)
+			margin-bottom: 0
+			position: relative
+			top: 2px
+		.menu__row:nth-child(2)
+			transform: rotate(-45deg)
+	.search 
+		display: none
+	.header__menu 
+		position: absolute 
+		width: 100%
+		top: 100% 
+		left: 0 
+		min-height: 100vh
+		background: $background-color
+	.menu 
+		ul 
+			flex-direction: column
+			align-items: flex-start
+			padding-top: 22px
+	.lenguages,
+	.menu__item 
+		margin-left: 54px
+		margin-bottom: 15px
+	.lenguages__item 
+		margin-left: 0 
+		margin-right: 1.781vw
+	.main-screen__item
+		width: 100%
+	.main-screen .main-screen__title 
+		padding-top: 80px
+	.slider
+		margin-left: -5px
+		margin-right: -5px
+	.slider-item
+		padding: 0 5px
+	.perfomance__img 
+		height: 980px
+	.program-img 
+		position: static
+		width: 100vw
+	.program-section 
+		padding-bottom: 0
+	.program-section .container .wrapper 
+		width: 100% 
+		max-width: 100%
+	.program-section .container .wrapper 
+		margin-bottom: 13.438vw
+	.operations__icons img 
+		margin-right: 0vw
+	.operations__icons 
+		width: 100% 
+		justify-content: space-between
+	.operations__header
+		display: flex 
+		flex-direction: column 
+		align-items: center
+		img 
+			margin-top: 0vw 
+			margin-bottom: 5vw
+	.about-text 
+		font-size: 18px
+	.about-text1 
+		right: 398px
+		top: -7px
+	.about-text3 
+		right: 406px
+		top: 113px
+	.about-text2 
+		left: 387px 
+		top: 53px
+	.workspace__item 
+		padding-left: 50px 
+		padding-right: 50px
+		font-size: 22px
+	
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.container 
+		max-width: 87.500vw
+	.header 
+		padding-top: 4.688vw
+		padding-bottom: 4.688vw
+		box-shadow: 0px 0.313vw 1.250vw rgba(0, 0, 0, 0.2)
+	.menu__row
+		width: 7.813vw
+		height: 0.313vw
+		margin-bottom: 1.563vw
+	.logo
+		img 
+			width: 28.438vw
+	.menu__btn.active
+		.menu__row:first-child 
+			top: 0.2vw
+	
+	body 
+		font-size: 4.375vw
+	.menu 
+		ul 
+			padding-top: 6.875vw
+	.lenguages,
+	.menu__item 
+		margin-left: 16.875vw
+		margin-bottom: 5.313vw
+	.main-screen__title
+		font-size: 10vw
+		text-align: left
+		line-height: 1.2
+		margin-bottom: 5vw
+	.sub-title 
+		font-size: 4.375vw
+		text-align: left
+	.bread-crambs
+		display: none
+	.main-screen .main-screen__title 
+		padding-top: 0
+	.main-screen 
+		padding-top: 49.063vw
+		.sub-title 
+			width: 59.063vw
+	.main-screen .main-screen__title 
+		padding-bottom: 4.688vw
+	.main-screen .sub-title 
+		padding-bottom: 51.563vw
+	.main-screen__item-title 
+		font-size: 7.500vw
+	.main-screen p
+		font-size: 4.375vw
+	p
+		font-size: 4.375vw
+	.main-screen__item:first-child 
+		padding-right: 6.250vw
+	.main-screen__item:nth-child(2)
+		padding-left: 6.250vw
+		margin-top: 5.625vw
+	.main-screen__item 
+		padding-top: 2vw
+		padding-bottom: 2vw
+		min-height: 40vw
+		align-items: center
+		display: flex
+	//start text section 
+	.text-section
+		padding-top: 31.875vw
+		padding-bottom: 7.188vw
+	//end text section
+
+	//start img section style 
+	.img-section 
+		height: 85.938vw
+		object-fit: cover
+		object-position: center
+		
+	.text-section p 
+		margin-bottom: 4.375vw		
+	//end img section style
+	.footer 
+		font-size: 3.125vw
+		padding-top: 9.375vw
+		padding-bottom: 11.875vw
+		.container 
+			flex-direction: column
+	.footer__text 
+		order: 1
+	.footer__social 
+		order: 2
+		margin-top: 1.250vw
+		margin-bottom: 1.250vw
+		img 
+			width: 3.375vw
+			max-height: 3.375vw
+	.copy 
+		order: 3
+	.platform:before 
+		display: none 
+	.platform 
+		padding-left: 0
+		margin-left: 0
+	p 
+		text-align: left
+	.scheme-section 
+		padding-top: 22.188vw
+		padding-bottom: 26.250vw
+		overflow: hidden
+	.scheme-section p:nth-child(2) 
+		margin-top: 5.625vw
+	.schem 
+		margin-top: 9.375vw
+		max-width: 100vw 
+		margin-left: -6vw
+	.text-section-light 
+		padding-top: 22.188vw
+		padding-bottom: 8vw
+		p 
+			margin-bottom: 4.688vw
+	.slider-item
+		padding: 1.563vw
+		img 
+			height: 93.125vw
+			width: 93.125vw
+	.slick-track 
+		margin-left: -5vw
+	.slider-section  
+		padding-bottom: 0
+	.persent-item 
+		height: 47.500vw
+	.percent-20 
+		width: 36vw
+	.percent-80 
+		width: 64vw
+	.persent-item 
+		font-size: 7.500vw
+	.graph-section 
+		padding-top: 20.938vw 
+		padding-bottom: 30.625vw
+		background-position: bottom 0 right 0
+	.round_pct 
+		width: 74.063vw
+	.round_pct 
+		margin-top: 0
+	.graph-section p 
+		margin-bottom: 3vw
+	.perfomance__text
+		position: static
+		transform: translateX(0)
+	.perfomance__text 
+		text-align: left
+		padding-bottom: 5.938vw
+	.perfomance
+		padding-top: 32.500vw
+	.perfomance__img 
+		height: 81.875vw
+	.stamp-img 
+		width: 34.375vw
+		height: 20.625vw
+		right: 23.125vw 
+		bottom: 23.750vw
+	.perfomance__title 
+		font-size: 7.500vw
+	.perfomance__text 
+		.container 
+			p 
+				width: 67.188vw
+	.expertise__main-screen 
+		padding-top: 49.375vw
+		padding-bottom: 51.563vw
+	.managing 
+		position: static
+		transform: translateY(0)
+		color: #000
+		font-weight: 600
+		padding-bottom: 20.625vw
+	.round-graph .container 
+		padding-top: 26.563vw
+	.round-graph-wrapper 
+		display: flex 
+		flex-direction: column-reverse
+	.graph 
+		transform: translateX(4vw)
+	.platform-item
+		display: flex 
+		align-items: center
+		justify-content: center
+		margin-top: 5vw
+		span 
+			font-size: 3.125vw
+			margin-left: 0
+		img 
+			width: 8.750vw
+			transform: translateX(4vw)
+	.round-graph 
+		padding-bottom: 33.438vw
+	.next 
+		display: none
+	.expertise-slider__item-content 
+		height: auto
+	.expertise-slider__item 
+		padding-top: 26.563vw
+		ul 
+			padding-left: 5vw
+		.container 
+			max-width: 87.500vw
+	.expertise-slider__item-title,
+	.h2
+		font-size: 5vw
+		margin-bottom: 5vw
+	.expertise-slider__item-text 
+		font-size: 4.375vw
+		padding-bottom: 9.375vw
+	.expertise-slider__img 
+		height: 73.750vw
+	.expertise-slider__item-content 
+		padding-top: 0
+	.pazle-label
+		font-size: 4.375vw
+		background: url('../img/puzzle_white2.svg')
+		background-repeat: no-repeat
+		background-position: top right
+		background-size: 8.5vw
+		padding-right: 9vw
+		left: 100%
+		transform: translateX(-100%)
+		top: 13vw
+	.label-container span 
+		top: 1.5vw
+	.label-container
+		display: flex 
+		justify-content: flex-end
+		.pazle-label 
+			transform: translateX(0)
+	.expertise-slider-section
+		.pazle-label 
+			transform: translateX(-100%)
+	.program-section .pazle-label
+		background: url('../img/puzzle_white2.svg')
+		background-repeat: no-repeat
+		background-position: top right
+		background-size: 8.5vw
+		br:nth-child(2)
+			display: none
+	.program-section
+		.h2 
+			span 
+				display: block
+	.button 
+		font-size: 3.438vw
+		padding: 2.031vw 6.094vw
+	.program-img 
+		height: 75.625vw
+	.p-30 
+		font-size: 4.375vw
+	.operations__item
+		width: 100%
+	.operations
+		.col-lg-4 
+			margin-bottom: 6.250vw
+	.operations__icons
+		justify-content: center
+		padding-top: 5vw
+		img 
+			height: 5.938vw
+			margin: 0 2.188vw
+	.operations .col-lg-8 
+		margin-bottom: 0
+	.pazle-label 
+		margin-bottom: 5vw
+	.pazle-label 
+		min-height: auto
+	.operations 
+		padding-top: 20.313vw
+		padding-bottom: 10vw
+	.container 
+		max-width: 87.5vw
+	.operations__header img
+		width: 34.688vw
+	.projects-solutins__header 
+		padding-top: 8.125vw
+		padding-bottom: 8.125vw
+	.project-slider
+		.next 
+			display: none
+	.project-table__row--header 
+		padding-left: 0
+	.project-table__row 
+		position: relative
+	.year-wrapper
+		position: absolute 
+		left: 25vw 
+		top: 2vw
+		height: 100%
+	.project-table__row .project-col:first-child
+		width: 30vw
+		padding-right: 4vw
+	.project-table__row .project-col:nth-child(2)
+		width: calc(100% - 30vw)
+	.year 
+		font-size: 3.750vw
+	.year-line 
+		margin-left: 2vw
+	.year-line 
+		top: 3vw
+	.project-table__row 
+		font-size: 3.125vw
+	.project-table__row-item 
+		margin-bottom: 7.813vw
+	.project-table__row 
+		margin-top: 7vw
+	.project-table__row--header 
+		margin-left: 0
+	.project-slider__item 
+		padding-top: 0
+	.project-slider 
+		padding-top: 5.313vw
+	.year 
+		transform: rotate(-90deg) translateY(-2vw)
+	.about-content img
+		width: 115.313vw
+	.about-content 
+		margin-top: 25.938vw
+		margin-bottom: 50vw
+	.about-text 
+		font-size: 2.8vw
+	.about-text2
+		left: 9.5vw 
+		top: 1.5vw
+	.about-text1
+		right: 9vw
+		top: -3vw
+	.about-text3
+		right: 15vw
+		top: 6vw
+	.about-text4
+		bottom: -7vw
+	.about-us 
+		padding-top: 0
+	.about-content 
+		margin-top: 25vw
+		margin-bottom: 50vw
+		padding-bottom: 8vw
+		padding-top: 4vw
+	.about-us .main-screen__item 
+		min-height: 12.500vw
+		width: 71.563vw
+	.about-us .main-screen__item-title 
+		font-size: 4.375vw
+	.about-us .main-screen__item-content 
+		font-size: 3.125vw
+	.about-us .main-screen__item:first-child
+		padding-right: 1.875vw
+		text-align: right
+	.about-us
+		padding-bottom: 30.938vw
+	.main-screen--career 
+		padding-top: 76.250vw
+		padding-bottom: 40.625vw
+		.container 
+			width: 100% 
+			max-width: 100%
+		.h2
+			padding-top: 2.813vw
+			padding-bottom: 2.813vw
+			margin-bottom: 0
+			background: rgba(34, 35, 38, 0.3)
+			width: 100vw
+			padding-left: 5.938vw 
+			padding-right: 5.938vw
+			font-size: 10vw
+	.practice
+		padding-top: 25.625vw
+		padding-bottom: 32.813vw
+		p 
+			width: 63.125vw
+	.title-60 
+		font-size: 5vw
+	.practice__img 
+		margin-top: 11.250vw
+	.item-section 
+		padding-top: 38.438vw
+		padding-bottom: 0
+		background-size: 100% 
+		background-position: top center
+		background-repeat: no-repeat
+
+		.main-screen__item:first-child p
+			text-align: right
+			padding-left: 10vw
+		.main-screen__item
+			min-height: 23.438vw
+			width: 92.188vw
+			p
+				font-size: 3.750vw
+	.workspace
+		padding-top: 0
+		padding-bottom: 40vw 
+		background-size: 100% 
+		background-position: bottom center
+		background-repeat: no-repeat
+	.workspace__list:before
+		display: none
+	.workspace__list
+		padding-left: 0
+		padding-top: 14.063vw
+	.workspace__item
+		font-size: 3.125vw
+		padding-left: 2vw
+		padding-right: 2vw
+		height: 7.462vw
+		margin-bottom: 6.875vw
+
+
+ 
+
+
+
+
+
+
+	
+
+
+
+		
+	
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
+
+
+
+

@@ -1,0 +1,659 @@
+@import "vars"
+@import "fonts"
+
+//start global style
+body 
+    background: $background-color
+    color: #fff
+    font-size: 16px
+    font-family: $main-font
+    font-weight: 400
+    margin: 0 
+    padding: 0
+a,
+a:hover 
+    text-decoration: none
+.container 
+    padding-left: 0 
+    padding-right: 0 
+    width: 1200px 
+    max-width: 95vw
+.sub-title
+    font-size: 32px
+p 
+    font-size: 32px
+    margin-bottom: 0
+.yellow 
+    color: $yellow
+//end global style
+
+//start header style
+.header 
+    padding-top: 30px 
+    padding-bottom: 30px
+    box-shadow: 0px 1px 4px 7px rgba(0, 0, 0, 0.2)
+    .container 
+        display: flex 
+        justify-content: space-between 
+        align-items: center
+.header__menu
+    display: flex
+    align-items: center
+.menu 
+    ul
+        list-style: none 
+        padding: 0 
+        display: flex
+        align-items: center
+        margin: 0
+.menu__item-link
+    color: #fff  
+.menu__item-link:hover
+    color: #F2B520
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+.menu__item 
+    margin-left: 58px
+.lenguages 
+    margin-left: 52px
+.lenguages__item
+    color: #fff
+    margin-left: 3px
+.lenguages__item.active,
+.lenguages__item:hover
+    color: #F2B520
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+.search 
+    margin-left: 58px
+
+//end header style
+
+//start footer style 
+.footer 
+    background: #D1D1D1
+    color: #000000
+    padding-top: 57px 
+    padding-bottom: 69px
+    .container 
+        display: flex 
+        justify-content: space-between 
+        align-items: center
+.footer__social 
+    display: flex 
+    align-items: flex-end
+    a 
+        display: flex 
+        align-items: flex-end
+        margin-left: 13px
+//end footer style 
+
+//start main-screen
+.main-screen    
+    padding-top: 32px
+    background: url('../img/main-screen.png')
+    background-size: cover 
+    background-position: center
+    text-align: center
+    .h2 
+        padding-top: 160px
+.bread-crambs
+    text-align: left
+    display: flex 
+    align-items: center
+    span 
+        color: $grey-text
+        padding: 0 4px
+.bread-crambs__link
+    color: $grey-text
+.bread-crambs__link:hover
+    color: $grey-text
+.main-screen__title
+    text-align: center
+    font-size: 70px
+    font-weight: 600
+    span 
+        color: $yellow
+.main-screen
+    .main-screen__title
+        padding-top: 160px
+    .sub-title 
+        padding-bottom: 160px
+.main-screen__list
+    display: flex
+    flex-direction: column
+.main-screen__item
+    width: 50%
+    background: red
+    color: #000
+    padding-top: 20px
+    padding-bottom: 15px
+.main-screen__item:first-child 
+    text-align: right
+    background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 102.81%)
+    display: flex 
+    flex-direction: column 
+    align-items: flex-end
+    padding-right: 27px
+.main-screen__item:nth-child(2)
+    text-align: left
+    align-self: flex-end
+    background: linear-gradient(90deg, #C9961A -0.61%, rgba(217, 217, 217, 0) 100%)
+    padding-left: 33px
+.main-screen__item-content
+    width: 752px 
+    max-width: 95%
+.main-screen__item-title 
+    font-size: 48px
+    font-weight: 600
+//end maiin-screen
+
+//start text-section style
+.text-section 
+    padding-top: 150px 
+    padding-bottom: 20px
+    color: #fff 
+    text-align: center
+    p 
+        margin-bottom: 30px
+//end text-section style 
+
+//start img-section style 
+.img-section 
+    width: 100%
+    object-fit: cover 
+    object-position: center
+//end img-section style 
+
+//start scheme sectiom style 
+.scheme-section
+    padding-top: 150px 
+    padding-bottom: 90px
+    text-align: center
+    p 
+        width: 1182px 
+        margin-left: auto 
+        margin-right: auto 
+        max-width: 100%
+    p:nth-child(2)
+        margin-top: 35px
+.schem 
+    display: block 
+    margin-left: auto 
+    margin-right: auto
+    max-width: 100%
+.platform 
+    padding-left: 23px
+    margin-left: 5px
+    position: relative
+   
+.platform:before
+    content: url('../img/cplatform_icon.svg')
+    position: absolute 
+    top: 70% 
+    left: 0px
+    transform: translateY(-50%)  
+//end scheme section style 
+
+//start text section light 
+.text-section-light 
+    background: #F5F5F5
+    padding-top: 101px 
+    padding-bottom: 20px
+    color: #000
+    text-align: center
+    p 
+        margin-bottom: 28px
+//end text section light
+
+//start slider item 
+.slider-section 
+    background: #F5F5F5
+    overflow: hidden
+    padding-bottom: 20px
+.slider 
+    margin-left: -10px 
+    margin-right: -10px
+.slider-item 
+    padding: 0 10px
+    img 
+        max-width: 100%
+        width: 100% 
+        height: 32.813vw
+        object-fit: cover
+//end slider item
+
+//start percent section 
+.persent-section
+    display: flex 
+    flex-wrap: wrap
+.percent-20
+    width: 31%
+.percent-80
+    width: 69%
+.percent-img
+    object-fit: cover
+.persent-item
+    height: 20.833vw
+    display: flex 
+    justify-content: center 
+    align-items: center
+    font-size: 5vw 
+    font-weight: 500
+    color: #000
+.percent-20 
+    background: #F5F5F5
+.percent-80 
+    background: #C9961A
+//end percent section
+
+//start graph section style 
+.graph-section
+    padding-top: 151px 
+    padding-bottom: 201px
+    text-align: center
+    background: url('../img/bg.png')
+    background-repeat: no-repeat
+    background-position: bottom 200px right
+    p 
+        margin-bottom: 30px
+.wrapper 
+    width: 862px 
+    max-width: 100% 
+    margin-left: auto 
+    margin-right: auto
+.round_pct
+    margin-top: 99px 
+    margin-left: auto 
+    margin-right: auto 
+    max-width: 90%
+//end graph section style 
+
+//start perfomance style 
+.perfomance
+    position: relative
+.perfomance__img 
+    width: 100%
+    height: 1100px 
+    object-fit: cover
+.perfomance__text 
+    text-align: center
+    position: absolute 
+    width: 100%
+    top: 150px 
+    left: 50% 
+    transform: translateX(-50%)
+.perfomance__title
+    font-size: 72px
+    margin-bottom: 0
+.stamp-img
+    width: 506px
+    position: absolute 
+    right: 28.177vw
+    bottom: 12.135vw
+//end perfomance style 
+
+//start expertise style
+.expertise__main-screen 
+    padding-top: 221px 
+    padding-bottom: 306px
+    background: url('../img/pct1_expertase.png')
+    background-repeat: no-repeat 
+    background-size: cover
+    text-align: center
+//end expertise style
+
+//start round-graph style 
+.round-graph
+    background: #D9D9D9
+    
+    padding-bottom: 122px
+    .container
+        position: relative
+        padding-top: 66px
+    .wrapper 
+        width: 1206px
+        margin-left: auto 
+        margin-right: auto 
+        max-width: 100%
+.graph 
+    margin-left: auto 
+    margin-right: auto
+    display: block
+    transform: translateX(6%)
+.platform-item
+    font-size: 48px 
+    font-weight: 600
+    color: #000
+    span 
+        margin-left: -80px
+.managing 
+    position: absolute 
+    top: -87px
+    right: 0
+    transform: translateY(-100%)
+
+.expertise-slider__img
+    max-width: 100%
+    height: 700px 
+    object-fit: cover
+.next 
+    cursor: pointer
+    transform: translateX(100%)
+    margin-top: 32px
+.expertise-slider__item-header
+    display: flex 
+    justify-content: space-between
+.expertise-slider__item-title,
+.h2
+    font-size: 64px
+    font-weight: 600
+    line-height: 125%
+    margin-bottom: 30px
+.expertise-slider__item 
+    .container 
+        width: 1094px 
+        max-width: 95%
+.expertise-slider__item-header
+    display: flex 
+    align-items: flex-start
+.expertise-slider__item-text 
+    font-size: 30px
+.expertise-slider__item-content
+    height: 514px
+    padding-top: 136px
+.expertise-slider__item-content 
+    position: relative
+    z-index: 999
+.label-container
+    font-size: 30px
+    width: 89.583vw
+    max-width: 95vw
+    position: relative
+    span 
+        position: relative
+        top: 15px
+        left: 0px 
+.pazle-label
+    position: static
+    display: inline-block
+    top: 47px
+    left: 0
+    background: url('../img/puzzle_white.svg')
+    background-repeat: no-repeat 
+    background-position: right top
+    padding-right: 85px
+    min-height: 50px
+    margin-bottom: 20px
+.expertise-slider-section
+    .pazle-label
+        position: absolute
+//end round-grapn style
+
+//start program section style
+.program-section 
+    background: #D9D9D9
+    padding-top: 37px
+    color: #000
+    padding-bottom: 303px
+    position: relative
+    .pazle-label 
+        position: static
+        display: inline-block
+        text-align: right
+        background: url('../img/puzzle_black.svg')
+        background-repeat: no-repeat
+        background-position: right top
+        margin-bottom: 30px
+
+    .container
+        .wrapper 
+            width: 703px
+            margin-left: 0
+.p-30 
+    font-size: 30px
+.button
+    font-size: 18px
+    background: $yellow
+    color: #000
+    padding: 10px 32px
+    margin-top: 40px
+    display: inline-block
+.button:hover 
+    color: #000
+.program-img
+    position: absolute 
+    right: 0 
+    bottom: 0
+    width: 42.865vw
+    height: 768px
+    object-fit: cover
+    object-position: left
+//end program section style
+
+//start operations style 
+.operations 
+    padding-top: 27px 
+    padding-bottom: 113px
+    .col-lg-8 
+        display: flex 
+        align-items: center
+        margin-bottom: 89px
+    .col-lg-4 
+
+        margin-bottom: 89px
+    .h2 
+        span 
+            display: block
+.operations__item-title
+    font-weight: 600
+.operations__item
+    width: 300px 
+    max-width: 100%
+.operations__icons 
+    display: flex 
+    align-items: center 
+    img 
+        display: block 
+        margin-right: 53px
+.operations
+    ul 
+        line-height: 1.8
+.operations__header
+    display: flex 
+    align-items: center
+    justify-content: space-between
+//end operations style 
+
+//start project solutins header
+.projects-solutins__header
+    padding-top: 32px
+    padding-bottom: 70px 
+    background: #D9D9D9
+.projects-solutins__header-title
+    text-align: center
+    color: #000
+    width: 883px
+    max-width: 100% 
+    margin-left: auto 
+    margin-right: auto
+    margin-top: 10px
+//end project solutions header
+
+//start project slier 
+.project-slider__item
+    color: #fff
+    padding-top: 106px 
+    padding-bottom: 93px
+    .h2 
+        margin-bottom: 0
+    .next
+        transform: translate(0)
+        display: flex 
+        align-items: center
+        margin-top: 0
+        .h2 
+            margin-right: 24px
+            color: #827F7F
+.project-slider__item-header
+    display: flex 
+    justify-content: space-between 
+    align-items: center
+.project-table__row
+    display: flex
+    margin-top: 55px
+    font-size: 24px
+    .project-col:first-child 
+        width: 430px
+        padding-right: 30px
+    .project-col:nth-child(2) 
+        width: calc( 100% - 430px )
+.table-title
+    font-weight: 600
+.project-table__row--two
+    display: block
+.project-table__row-item 
+    display: flex
+    margin-bottom: 55px
+.year 
+    transform: rotate(-90deg) translateY(-20px)
+    font-size: 30px 
+    color: $yellow
+    font-weight: 600
+.year-line
+    width: 1px 
+    height: calc( 100% - 122px )
+    background: $yellow
+    margin-left: 22px
+    position: relative 
+    top: 25px
+.project-table__row--header
+    margin-left: 66.75px
+//end project slider 
+
+//start about style
+.about-us
+    padding-bottom: 249px
+    background: url('../img/world.png')
+    background-repeat: no-repeat 
+    background-position: top 45px center
+    padding-top: 32px
+    
+    .main-screen__item-title
+        line-height: 1
+    .main-screen__item 
+        text-align: left
+    .main-screen__item:first-child
+        .main-screen__item-content 
+            width: 501px
+            max-width: 100%
+.about-content
+    margin-top: 120px
+    margin-bottom: 320px
+    overflow: hidden
+    display: flex 
+    justify-content: center
+    position: relative
+    padding-top: 15px
+    padding-bottom: 54px
+    img 
+        transform: translateX(5.5%)
+.about-text
+    position: absolute
+    font-weight: 500
+.about-text1
+    right: 180px
+    top: -23px
+.about-content__images
+    position: relative
+.about-text2
+    left: 180px
+    top: 35px
+.about-text3
+    right: 200px
+    top: 100px
+.about-text4
+    bottom: -54px
+    left: 50% 
+    transform: translateX(-50%)
+//end about style
+
+//start career style 
+.main-screen--career
+    text-align: left
+    padding-bottom: 323px
+    background: url(../img/pct1_career.png)
+    background-size: cover 
+    background-position: center
+    .h2
+        padding-top: 200px
+        span 
+            display: block
+.item-section 
+    padding-top: 417px
+    padding-bottom: 183px
+    background: url('../img/pct_career2.png')
+    background-size: cover 
+    background-position: center
+    .main-screen__item:first-child
+        .main-screen__item-content
+            width: 620px 
+            max-width: 100%
+    .main-screen__item:nth-child(2)
+        .main-screen__item-content
+            width: 483px 
+            max-width: 100%
+.title-60 
+    font-size: 60px
+    line-height: 1.2
+.practice__img 
+    max-width: 100%
+    margin-top: 73px
+.practice
+    padding-top: 133px 
+    padding-bottom: 210px
+//end career style 
+
+//start workspace 
+.workspace 
+    padding-top: 347px 
+    padding-bottom: 50px
+    background: url('../img/pct_workspace.png')
+    .title-60
+        span 
+            display: block
+    p 
+        width: 527px 
+        max-width: 100%
+.workspace__item
+    margin-bottom: 78px
+    height: 68px
+    background: #000
+    display: flex
+    justify-content: center 
+    align-items: center
+    padding-left: 158px 
+    padding-right: 158px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    border: 1px solid $yellow
+.workspace__item:last-child 
+    margin-bottom: 0
+.workspace__list
+    padding-top: 32px
+    display: flex 
+    flex-direction: column 
+    align-items: flex-start
+    padding-left: 50px 
+    position: relative
+.workspace__list:before 
+    content: ''
+    width: 50px 
+    height: 102% 
+    background: $yellow 
+    position: absolute 
+    top: -2%
+    left: 0 
+//end workspace 
+
+@import "media"
+
+
+
