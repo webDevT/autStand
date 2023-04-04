@@ -5,3 +5,20 @@ $(function(){
     })
 
 });
+
+$('.input--text').focusin(function () {
+    $('.placeholder').addClass('hide');
+}).focusout(function () {
+   $('.placeholder').removeClass('hide');
+});
+
+$('.input--text').on('keyup',function(){
+  var $this = $(this),
+      val = $this.val();
+  
+  if(val.length >= 1){
+    $('.placeholder').addClass('active');
+  }else {
+    $('.placeholder').removeClass('active');
+  }
+});
