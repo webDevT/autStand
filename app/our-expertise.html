@@ -99,10 +99,43 @@
 		</p>
 		<div class="round-graph-wrapper">
 			
-		<div class="wrapper">
+		<div class="pazzle-wrapper">
+			<div class="pazzle-tittle">
+				Automation
+				<span>
+					 System 
+				</span>
+				
+				 Engineering
+			</div>
+
+			<div class="pazzle-text pazzle-text-1">
+				Support
+			</div>
 			
-			<img src="img/graph.svg" alt="" class="graph">
+			<div class="pazzle-text pazzle-text-2">
+				Development
+			</div>
+
+			<div class="pazzle-text pazzle-text-3">
+				Software/Tools
+			</div>
+
+			<div class="pazzle-text pazzle-text-4">
+				Electrical
+Installation
+<br>
+&
+<br>
+ Implementation
+
+
+
+			</div>
+
+			<img src="img/pazzle.svg" alt="" class="pazzle">
 		</div>
+
 		<div class="platform-item">
 			<img src="img/cplatform_icon2.svg" alt="">
 			<span>
@@ -110,6 +143,7 @@
 			</span>
 			
 		</div>
+
 		</div>
 		
 	</div>
@@ -125,10 +159,10 @@
 		</div>
 		
 	</div>
-	<div class="expertise-slider">
+	<div class="expertise-slider" dir="rtl">
 
-		<div class="expertise-slider__item">
-			<div class="expertise-slider__item-content">
+		<div class="expertise-slider__item expertise-slider__item1">
+			<div class="expertise-slider__item-content expertise-slider__item-content--1">
 				<div class="container">
 					<div class="expertise-slider__item-header">
 					<div class="expertise-slider__item-title h2">
@@ -163,7 +197,7 @@
 			<img src="img/factory_expertise1.png" alt="" class="expertise-slider__img">
 		</div>
 
-		<div class="expertise-slider__item">
+		<div class="expertise-slider__item expertise-slider__item2">
 			<div class="expertise-slider__item-content">
 				<div class="container">
 					<div class="expertise-slider__item-header">
@@ -193,12 +227,12 @@ with future technologies worldwide.
 			<img src="img/factory_expertise2.png" alt="" class="expertise-slider__img">
 		</div>
 
-		<div class="expertise-slider__item">
+		<div class="expertise-slider__item expertise-slider__item3">
 			<div class="expertise-slider__item-content expertise-slider__item-content-3">
 				<div class="container">
 					<div class="expertise-slider__item-header">
 					<div class="expertise-slider__item-title h2">
-						MHI4.0<sup>TM</sup> Techology <br>
+						MHI4.0<sup>TM</sup> Technology  <br>
 
 
 
@@ -367,11 +401,11 @@ Implementation
 <!-- end operations secion -->
 
 <!-- start img section -->
-<div class="container">
-	<video autoplay muted class="video">
+
+	<video autoplay muted class="video" id="video">
 	<source src="video/3.mp4" type="video/mp4">
   </video>
-</div>
+
 
 <!-- end img section -->
 
@@ -449,17 +483,14 @@ Automatic system alarms for operational processes
 		</div>
 
 		<div class="footer__social">
-			<a href="">
+			<a href="mailto:Administration@autStand.com">
 				<img src="img/email.svg" alt="">
 			</a>
-			<a href="">
+			<a href="https://www.linkedin.com/company/automation-standard/">
 				<img src="img/linkedin.svg" alt="">
 			</a>
-			<a href="">
+			<a href="https://www.facebook.com/AutomationStandard?mibextid=ZbWKwL">
 				<img src="img/facebook.svg" alt="">
-			</a>
-			<a href="">
-				<img src="img/instagram.svg" alt="">
 			</a>
 		</div>
 	</div>
@@ -473,16 +504,105 @@ crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>
+	
 		 if($(window).width() > 768) {
-		$('.expertise-slider').slick({
-  infinite: true,
+		
+$(function () { 
+
+// setting for slick.js
+$('.expertise-slider').slick({
+    infinite: true,
   slidesToShow: 1,
   prevArrow: false,
   nextArrow: $('.next'),
-autoplay: true,
-  
+//   pauseOnHover:false,
+	autoplay: true,
+	rtl: true,
+    responsive: [
+        {
+            breakpoint: 767,
+            settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 1,
+               }
+         }
+    ]
+}).slick('slickPause');
+
+// A function that start autoplay when entering the viewport
+function triggerScroll(targetObj) {
+
+    let targetFlag = false;
+    let scrollTop = $(window).scrollTop();
+    let scrollBottom = scrollTop + $(window).height();
+    let targetTop = targetObj.offset().top;
+    let targetBottom = targetTop + targetObj.height();
+    if (scrollBottom > targetTop && scrollTop < targetBottom) {
+        if (!targetFlag) {
+            
+            targetObj.slick('slickPlay');
+            targetFlag = true;
+        }
+    } else {
+           
+            targetObj.slick('slickPause');
+            targetFlag = false;
+    }
+
+    $(window).on('scroll', function () {
+        scrollTop = $(window).scrollTop();
+        scrollBottom = scrollTop + $(window).height();
+        targetTop = targetObj.offset().top;
+        targetBottom = targetTop + targetObj.height();
+        if (scrollBottom > targetTop && scrollTop < targetBottom) {
+            // Start autoplay when entering the viewport
+            if (!targetFlag) {
+            
+                targetObj.slick('slickPlay');
+                targetFlag = true;
+            }
+        } else {
+          
+            if (targetFlag) {
+               
+                targetObj.slick('slickPause');
+                targetFlag = false;
+            }
+        　}
+    　});
+　　　}
+
+　　　triggerScroll($('.expertise-slider'));
 });
+
 		 }
+
+		 
 	</script>
+
+	<script>
+	document.getElementById('video').addEventListener('ended',myHandler,false);
+function myHandler(e) {
+    console.log('ended');
+    setTimeout(function(){
+        document.getElementById('video').play();
+    }, 2000);
+}
+	</script>
+
+
+<script>
+	var postion = $('.pazzle').offset().top,
+    heigh = $('.pazzle').height();
+$(document).on('scroll', function (){
+  var scroll = $(document).scrollTop();
+  if(scroll  > postion - 200 ) {	 
+	$('.pazzle').addClass('pazzle-anim');
+     }else {
+		//$('.pazzle').removeClass('pazzle-anim');;
+     }
+})
+
+</script>
 </body>
 </html>

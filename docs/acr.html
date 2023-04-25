@@ -221,32 +221,36 @@ key advantages
 
 <div class="walk">
 	<div class="container">
-		<div class="title-60">
+		<div>
+			<div class="title-60">
 			On-site <span class="yellow">3D walks </span>
 
 		</div>
 		<div class="p-30 bold">
 			Electrical Installation
-		</div></div>
+		</div>
+		</div>
+		<img src="img/next.svg" alt="" class="next">
+		</div>
 
-		<div class="container container-img ">
+		
 			<div class="walk-slider-wrapper">
 			<div class="walk-slider">
 				<div class="walk-slider-item">
-					<video autoplay muted class="video">
+					<video autoplay muted class="video video1"">
 						<source src="video/1.mp4" type="video/mp4">
 					  </video>
 				</div>
 				<div class="walk-slider-item">
-					<video autoplay muted class="video">
+					<video autoplay muted class="video video2">
 						<source src="video/2.mp4" type="video/mp4">
 					  </video>
 				</div>
 			</div>
 
-			<img src="img/next.svg" alt="" class="next">
+			
 		</div>
-		</div>
+		
 		
 	
 </div>
@@ -262,17 +266,14 @@ key advantages
 		</div>
 
 		<div class="footer__social">
-			<a href="">
+			<a href="mailto:Administration@autStand.com">
 				<img src="img/email.svg" alt="">
 			</a>
-			<a href="">
+			<a href="https://www.linkedin.com/company/automation-standard/">
 				<img src="img/linkedin.svg" alt="">
 			</a>
-			<a href="">
+			<a href="https://www.facebook.com/AutomationStandard?mibextid=ZbWKwL">
 				<img src="img/facebook.svg" alt="">
-			</a>
-			<a href="">
-				<img src="img/instagram.svg" alt="">
 			</a>
 		</div>
 	</div>
@@ -287,7 +288,8 @@ crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 	<script>
 			 if($(window).width() > 768) {
-		$('.walk-slider').slick({
+			
+					var slider = $('.walk-slider').slick({
   infinite: true,
   slidesToShow: 1,
   prevArrow: false,
@@ -296,16 +298,34 @@ crossorigin="anonymous"></script>
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 1,
-		
-		
+        slidesToShow: 1,	
       }
-    },
-
-  
+    }  
   ]
-});
+})
 			 }
+$('.video').on('ended', function(){
+	$('.walk-slider').slick('slickNext'); 
+	console.log('video end')
+});
+
+$('.walk-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  $('.video').each(function() {
+    $(this).get(0).pause();
+  });
+});
+
+$('.walk-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  if( $('.slick-current').find('video').length !== 0) {
+    $(".walk-slider .slick-current video")[0].play();
+  }
+});
+
+
+	</script>
+
+	<script>
+	
 	</script>
 </body>
 </html>

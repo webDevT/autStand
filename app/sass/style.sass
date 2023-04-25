@@ -152,14 +152,14 @@ p
 
 //start text-section style
 .text-section 
-    padding-top: 150px 
+    padding-top: 100px 
     padding-bottom: 20px
     color: #fff 
     text-align: center
     .container 
         width: 1267px
     p 
-        margin-bottom: 30px
+        margin-bottom: 20px
 //end text-section style 
 
 //start img-section style 
@@ -254,7 +254,7 @@ p
 
 //start graph section style 
 .graph-section
-    padding-top: 151px 
+    padding-top: 209px 
     padding-bottom: 201px
     text-align: center
     background: url('../img/bg.png')
@@ -340,7 +340,7 @@ p
     margin-left: auto
     margin-right: auto
     text-align: center
-    margin-top: -50px
+    margin-top: -76px
     img 
         width: 72px
     span 
@@ -353,7 +353,6 @@ p
 
 .expertise-slider__img
     max-width: 100%
-    height: 700px 
     object-fit: cover
 .next 
     cursor: pointer
@@ -367,7 +366,7 @@ p
     font-size: 64px
     font-weight: 600
     line-height: 125%
-    margin-bottom: 30px
+    margin-bottom: 10px
 .expertise-slider__item 
     .container 
         width: 1147px 
@@ -378,7 +377,7 @@ p
 .expertise-slider__item-text 
     font-size: 30px
 .expertise-slider__item-content
-    height: 480px
+    // height: 480px
     padding-top: 136px
 .expertise-slider__item-content 
     position: relative
@@ -869,11 +868,11 @@ p
 .acr-program__list
     width: 780px 
     max-width: 100%
-    margin-top: 75px
+    margin-top: 55px
     li 
         margin-bottom: 15px
 .electrical-instal 
-    padding-top: 123px 
+    padding-top: 233px 
     padding-bottom: 120px
 .electrical-instal__table 
     margin-top: 63px
@@ -905,9 +904,17 @@ p
     position: relative
 .walk .next 
     position: absolute 
-    top: 50% 
+    top: 0% 
     right: 0
-    transform: translateX(120%) translateY(-50%)
+.walk 
+    .container 
+        display: flex
+        justify-content: space-between
+        padding-bottom: 5px
+    .next 
+        position: static
+        align-self: flex-end
+
 .container--pr
     position: relative
 .button--pr
@@ -939,12 +946,12 @@ p
 
 
 .expertise-slider__item-content-3
-    height: 520px
+    // height: 520px
 .expertise-slider__img
     width: 100% 
     object-fit: cover
 .expertise-slider__img3
-    height: 660px
+    // height: 660px
 
 .video 
     width: 100%
@@ -966,9 +973,13 @@ p
     padding-bottom: 88px
     .video
         width: 100%
-        height: 600px 
+        height: 900px
         object-fit: cover 
         object-position: center
+        max-height: calc(100vh - 150px)
+    .walk-slider-item 
+        height: 900px
+        max-height: calc(100vh - 150px)
 .main-screen
     display: flex 
     justify-content: space-between 
@@ -989,7 +1000,7 @@ p
     z-index: 9999
 .error-wrapper 
     text-align: center
-    padding-top: 40px
+    padding-top: 70px
 .error-title
     font-size: 150px
 .operations--dev
@@ -1016,7 +1027,100 @@ p
     text-align: right
 .send-cv-section
     background-repeat: no-repeat
+.form-section,
+.cv-content
+    min-height: calc( 100vh - 248px)
+    height: 600px
+.acr-program
+    padding-bottom: 10px
+.expertise-slider__item-content
+    padding-bottom: 0px
+.expertise-slider__item
+    display: flex 
+    flex-direction: column 
+    justify-content: space-between
+.expertise-slider__item1
+    .expertise-slider__img
+        height: 603px
+    .expertise-slider__item-content 
+        padding-bottom: 38px
+.expertise-slider__item2
+    .expertise-slider__img
+        height: 693px
+    .expertise-slider__item-content  
+        padding-bottom: 10px
+.expertise-slider__item3
+    .expertise-slider__img
+        height: 596px
+.walk .p-30 
+    margin-bottom: 25px
+.walk .title-60
+    margin-bottom: 38px
+.walk 
+    padding-bottom: 0
+.expertise-slider__item-content
+    direction: ltr
+.thanks 
+    padding-left: 36px 
+    padding-right: 36px
+    margin-left: auto 
+    margin-right: auto
+.thank-you-content 
+    text-align: center
+.pazzle-tittle
+    font-size: 36px 
+    font-weight: 600
+    text-align: center
+    color: #000
+    position: absolute 
+    top: 395px
+    left: 50% 
+    transform: translateX(-50%)
+    line-height: 167%
+    span 
+        display: block 
+        color: #A17815
 
+.pazzle-anim
+    -webkit-animation: spin 4s linear infinite
+    -moz-animation: spin 4s linear infinite
+    animation: spin 1s linear 3
+@-moz-keyframes spin
+    100%
+        -moz-transform: rotate(360deg)
+@-webkit-keyframes spin
+    100%
+        -webkit-transform: rotate(360deg)
+@keyframes spin
+    100%
+        -webkit-transform: rotate(360deg)
+        transform: rotate(360deg)
+.pazzle-text
+    text-align: center
+    font-size: 32px 
+    font-weight: 400
+    position: absolute  
+    color: #000
+    
+.pazzle-text-1  
+    top: 147px
+    left: 259px
+.pazzle-text-2  
+    top: 147px
+    right: 171px
+.pazzle-text-3  
+    top: 603px
+    left: 19px
+.pazzle-text-4 
+    bottom: 110px
+    right: 17px
+    line-height: 125%
+.pazzle-wrapper
+    width: 959px 
+    height: 959px
+    margin-left: auto 
+    margin-right: auto
+    margin-top: -48px
 @import "media"
 
 
