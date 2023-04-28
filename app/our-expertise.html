@@ -603,6 +603,20 @@ $(document).on('scroll', function (){
      }
 })
 
+
+if($(window).width() < 768) {
+	var postion = $('.pazzle').offset().top,
+    heigh = $('.pazzle').height();
+$(document).on('scroll', function (){
+  var scroll = $(document).scrollTop();
+  if(scroll  > postion - 500 ) {	 
+	$('.pazzle').addClass('pazzle-anim');
+     }else {
+	
+     }
+})
+}
+
 </script>
 </body>
 </html>
